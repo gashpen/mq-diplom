@@ -16,7 +16,7 @@
   }
   
   body {
-    font-family: OpenSans, sans-serif;
+    font-family: "OpenSans", sans-serif;
     margin: 0;
   }
   
@@ -108,37 +108,52 @@
   }
   
   /*PAGE*/
+  
   .page__trends__container {
     display: flex;
   }
-  .trends__card{
+ 
+
+  .trends__card {
     display: flex;
     width: 25%;
-    min-height: 250px;
+    min-height: 320px;
+    position: relative;
+    z-index: 1;
   }
+  .trends__card:after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }  
 
   .trends__garden{
     background-image: url(/images/trend1.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    padding: 15px;
     margin-right: 4px;
   }
+
   .trends__cheese{
     background-image: url(/images/trend2.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     margin-right: 4px;
   }
   .trends__camping{
     background-image: url(/images/trend3.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     margin-right: 4px;
   }
   .trends__lemon{
     background-image: url(/images/trend4.jpg);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   .border__card {
@@ -549,6 +564,40 @@
     margin-left: 4px;
   }
   
+  .product {
+    margin: 0 auto;
+  }
+
+  .product__title {
+    font-family: "OpenSans bold", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    line-height: 2;
+    margin: 0;
+    color: #0f0d0e;
+  }
+  
+  .product__title:after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #e1d9bd;
+    width: 66px;
+    margin: 6px auto 19px;
+  }
+
+  .product__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .product__card__container:nth-child(2){
+    margin: 0 115px;
+  } 
+    .product__card__text {
+      box-sizing: border-box;
+    }
+
   /*FOOTER*/
   .footer {
     display: flex;
