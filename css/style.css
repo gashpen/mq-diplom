@@ -44,6 +44,7 @@
     padding-top: 28px;
     padding-bottom: 130px;
     z-index: 1;
+    width: 100%;
   }
   
   .header:after {
@@ -66,7 +67,26 @@
     padding: 0 15px;
     justify-content: space-between;
   }
-  
+  @media (min-width: 641px) and (max-width: 1199px) {
+    .list_item_link {
+      display: none;
+    }
+    .trends__card {
+      width: 49%;
+  }
+  .page__trends__container {
+    flex-wrap: wrap;
+  } 
+  .card {
+    flex-wrap: wrap;
+  }
+  .main_content {
+    width: 390px;
+  }
+  .page_container {
+    width: 100%;
+  }
+  }
   /*MENU*/
   .menu_header {
     display: flex;
@@ -79,6 +99,7 @@
   
   .nav_list {
     display: flex;
+    width: 100%;
   }
   
   .nav_list_item:nth-child(n + 2) {
@@ -103,7 +124,7 @@
     color: #fff;
     width: 690px;
     font-size: 45px;
-    margin: 120px auto;
+    margin: 120px auto 0px;
     padding: 0;
   }
   
@@ -116,11 +137,13 @@
 
   .trends__card {
     display: flex;
-    width: 25%;
+    width: ;
     min-height: 320px;
     position: relative;
     z-index: 1;
   }
+
+    
   .trends__card:after {
     content: "";
     position: absolute;
@@ -168,7 +191,7 @@
   .card__text{
    color: white;
    font-family: url(/fonts/OpenSans-Bold.woff2);
-   font-size: 26px;
+   font-size: 20.5px;
    text-transform: uppercase;
   }
 
@@ -179,8 +202,9 @@
   .card__link__item{
     color:#b59f5b;
     font-family:url(/fonts/OpenSans-Bold.woff2) ;
-    font-size: 18.5px;
+    font-size: 14px;
     text-transform: uppercase;
+    margin-right: 20px;
   }
   
   .page__title {
@@ -566,6 +590,7 @@
   
   .product {
     margin: 0 auto;
+    height: 440px;
   }
 
   .product__title {
@@ -589,13 +614,73 @@
   .product__container {
     display: flex;
     justify-content: center;
+
   }
 
   .product__card__container:nth-child(2){
     margin: 0 115px;
   } 
+
+  .product__card__img {
+    position: absolute;
+    
+  }
+
     .product__card__text {
       box-sizing: border-box;
+      border: #b59f5b 3px solid;
+      width: 347px;
+      height: 267px;
+      position: relative;
+      top: 172px;
+      right: 23px;
+      padding-top:55px;
+      padding-left: 20px;
+    }
+
+    .name__product {
+      font-size: 20px;
+      font-family: "OpenSans bold", sans-serif;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    .card__description {
+      font-size: 15px;
+      font-family: "OpenSans bold", sans-serif;
+      display: inline-block;
+      line-height: 1.4;
+    }
+
+    .price__button__container{
+      display: flex;
+      justify-content: space-between;
+      padding-right: 20px;
+      margin-top: 20px;
+    }
+    .price__container{
+      display: flex;
+      flex-direction: column;
+    }
+    .button__count {
+      width: 120px;
+      height: 48px;
+      background-color: #b59f5b;
+      text-align: center;
+      padding-top: 14px;
+    }
+    .button__text {
+      color:#eeeeee;
+      font-family: "OpenSans bold", sans-serif;
+      text-transform: uppercase;
+    }
+    .count_strike{
+      text-decoration: line-through;
+      font-size: 14px;
+      font-family: "OpenSans bold", sans-serif;
+    }
+    .count {
+      font-size: 20px;
+      font-family: "OpenSans bold", sans-serif;
     }
 
   /*FOOTER*/
