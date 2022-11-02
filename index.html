@@ -107,7 +107,10 @@
       <main class="main">
         <article class="card">
           <figure class="card_img">
-            <img class="main_photo" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" alt="Место">
+            <picture>
+              <img class="main_photo" srcset="/images/banner-bg.jpg" alt="Место">
+              <source media="(min-width: 641px) and (max-width: 1199px)" srcset="/images/banner-bg.jpg">
+            </picture>
           </figure>
   
           <div class="main_content">
