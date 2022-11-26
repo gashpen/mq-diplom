@@ -52,6 +52,11 @@
       background-image: url(../images/banner-bg-tablet.jpg);
     }
   }
+  @media (min-width: 360px) and (max-width: 640px) {
+    .header {
+      background-image: url(../images/banner-mobile.jpg);
+    }
+  }
 
   .header:after {
     content: "";
@@ -74,6 +79,11 @@
     justify-content: space-between;
   }
   @media (min-width: 641px) and (max-width: 1199px) {
+    .list_item_link {
+      display: none;
+    } 
+  }
+  @media (min-width: 360px) and (max-width: 640px) {
     .list_item_link {
       display: none;
     } 
@@ -114,10 +124,22 @@
     text-transform: uppercase;
     text-align: center;
     color: #fff;
-    width: 690px;
-    font-size: 45px;
+    width: 50%;
+    font-size: 2.8125rem;
     margin: 120px auto 0px;
     padding: 0;
+  }
+  @media (min-width: 641px) and (max-width: 1199px) {
+    .header_title {
+      font-size: 2.5rem;
+      width: 95%;
+    } 
+  }
+  @media (min-width: 360px) and (max-width: 640px) {
+    .header_title {
+      font-size: 1.625rem;
+      width: 75%;
+    } 
   }
   
   /*PAGE*/
@@ -131,7 +153,11 @@
       flex-wrap: wrap;
     } 
   }
- 
+  @media (min-width: 360px) and (max-width: 640px) {
+    .page__trends__container {
+      flex-wrap: wrap;
+    } 
+  }
   .trends__card {
     display: flex;
     min-width: 25%;
@@ -145,8 +171,19 @@
       width: 49%;
     }
   }
+  @media (min-width: 360px) and (max-width: 640px) {
+    .trends__card {
+      width: 99%;
+    }
+  }
 
   @media (min-width: 641px) and (max-width: 1199px){
+    .trends__card:nth-child(n+1){
+      margin-bottom: 4px;
+    }
+  }
+
+  @media (min-width: 360px) and (max-width: 640px){
     .trends__card:nth-child(n+1){
       margin-bottom: 4px;
     }
@@ -165,26 +202,26 @@
 
 
   .trends__garden{
-    background-image: url(/images/trend1.jpg);
+    background-image: url(../images/trend1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-right: 4px;
   }
 
   .trends__cheese{
-    background-image: url(/images/trend2.jpg);
+    background-image: url(../images/trend2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-right: 4px;
   }
   .trends__camping{
-    background-image: url(/images/trend3.jpg);
+    background-image: url(../images/trend3.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-right: 4px;
   }
   .trends__lemon{
-    background-image: url(/images/trend4.jpg);
+    background-image: url(../images/trend4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -247,9 +284,16 @@
   @media (min-width: 641px) and (max-width: 1199px) {
     .page_container {
       width: 100%;
+      padding: 0px 0px;
     }
   }
-  
+  @media (min-width: 360px) and (max-width: 640px) {
+    .page_container {
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 0px 0px;
+    }
+  }
   .main {
     width: 778px;
   }
@@ -259,6 +303,12 @@
     display: flex;
   }
   @media (min-width: 641px) and (max-width: 1199px) {
+    .card {
+      flex-wrap: wrap;
+      width: 390px;
+    }
+  }
+  @media (min-width: 360px) and (max-width: 640px) {
     .card {
       flex-wrap: wrap;
       width: 390px;
@@ -280,7 +330,12 @@
       margin-left: 30px;
     }
   }
-
+  @media (min-width: 360px) and (max-width: 640px) {
+    .main_photo {
+      margin-right: 15px;
+      width: 100%;
+    }
+  }
 
   .main_content {
     margin-left: 30px;
@@ -290,7 +345,12 @@
       width: 390px;
     }
   }
-
+  @media (min-width: 360px) and (max-width: 640px) {
+    .main_content {
+      width: 390px;
+      margin-left: 0px;
+    }
+  }
   .main_tags_list {
     display: flex;
     font-family: "OpenSans bold", sans-serif;
@@ -362,7 +422,14 @@
   @media (min-width: 641px) and (max-width: 1199px) {
     .new_posts_container {
       margin-left: 35px;
-      margin-right: 35px;
+      
+    }
+  }
+  @media (min-width: 360px) and (max-width: 640px) {
+    .new_posts_container {
+      margin-left: 0px;
+      margin-right: 15px;
+      width: 100%;
     }
   }
   
@@ -661,23 +728,30 @@
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
+    padding: 0px 145px;
   }  
 
   @media (min-width: 641px) and (max-width: 1199px){
     .product__container {
       flex-wrap: wrap;
+      padding: 0;
     }
   } 
   .product__card__container {
     box-sizing: content-box;
-    
   }
+
+  .product__card__container:nth-child(2) {
+    margin-left: 30px;
+    margin-right: 30px;
+}
 @media (min-width: 641px) and (max-width: 1199px){
     .product__card__container:nth-child(3){
       margin-top: 197px;
     }
     .product__card__container:nth-child(2){
       margin-left:20px;
+      margin-right: 0px;
     } 
 }
   

@@ -107,7 +107,7 @@
       <main class="main">
         <article class="card">
           <figure class="card_img">
-            <img class="main_photo" srcset="../images/last-post1.jpg" alt="Место">
+            <img class="main_photo" src="images/last-post1.jpg" alt="Место">
           </figure>
   
           <div class="main_content">
@@ -434,7 +434,13 @@
         <div class="product__card__container">
           <div class="product__card__img">
             <a href="#">
-              <img src="../images/shop-item-desk1.jpg" alt="">
+              <picture>
+                <source srcset="images/shop-item-tablet1.jpg" media="(min-width: 641px) and (max-width: 1199px)">
+                <source srcset="images/shop-item-mobile1.jpg" media="(min-width: 360px) and (max-width: 640px)">
+                <source srcset="images/shop-item-desk1.jpg"> 
+                <img srcset="images/shop-item-desk1.jpg" alt="My default image">
+                </picture>
+              <!-- <img src="images/shop-item-desk1.jpg" alt=""> -->
             </a>
           </div>
           <div class="product__card__text">
@@ -458,7 +464,13 @@
         <div class="product__card__container">
           <div class="product__card__img">
             <a href="#">
-              <img src="../images/shop-item-desk2.jpg" alt="">
+              <picture>
+                <source srcset="images/shop-item-tablet2.jpg" media="(min-width: 641px) and (max-width: 1199px)">
+                <source srcset="images/shop-item-mobile2.jpg" media="(min-width: 360px) and (max-width: 640px)">
+                <source srcset="images/shop-item-desk2.jpg"> 
+                <img srcset="images/shop-item-desk2.jpg" alt="My default image">
+                </picture>
+              <!-- <img src="images/shop-item-desk2.jpg" alt=""> -->
             </a>
           </div>
           <div class="product__card__text">
@@ -479,7 +491,13 @@
         <div class="product__card__container">
           <div class="product__card__img">
             <a href="#">
-              <img src="../images/shop-item-desk3.jpg" alt="">
+              <picture>
+                <source srcset="images/shop-item-tablet3.jpg" media="(min-width: 641px) and (max-width: 1199px)">
+                <source srcset="images/shop-item-mobile3.jpg" media="(min-width: 360px) and (max-width: 640px)">
+                <source srcset="images/shop-item-desk3.jpg"> 
+                <img srcset="images/shop-item-desk3.jpg" alt="My default image">
+                </picture>
+              <!-- <img src="images/shop-item-desk3.jpg" alt=""> -->
             </a>
           </div>
           <div class="product__card__text">
