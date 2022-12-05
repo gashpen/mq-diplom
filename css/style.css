@@ -67,8 +67,50 @@
     bottom: 0;
     left: 0;
     z-index: -1;
+    
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;  
+    position: fixed;
+    top: 20px;
+    right: 35px;
+    width: 23px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    visibility: hidden;
+  }
+  @media (min-width: 641px) and (max-width: 1199px) {
+    .menu__btn {
+      visibility: visible;
+    }
+  }
+  @media (min-width: 360px) and (max-width: 640px) {
+    .menu__btn {
+      visibility: visible;
+    }
   }
   
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -7px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 7px;
+  }
+
   .header_container {
     display: flex;
     align-items: center;
@@ -97,6 +139,12 @@
   
   .logo_img {
     width: 180px;
+  }
+
+  @media (min-width: 360px) and (max-width: 640px) {
+    .logo_img {
+      width: 270px;
+    }
   }
   
   .nav_list {
@@ -133,6 +181,7 @@
     .header_title {
       font-size: 2.5rem;
       width: 95%;
+      margin-top: 45px;
     } 
   }
   @media (min-width: 360px) and (max-width: 640px) {
@@ -427,7 +476,7 @@
   }
   @media (min-width: 360px) and (max-width: 640px) {
     .new_posts_container {
-      margin-left: 0px;
+      margin-left: 15px;
       margin-right: 15px;
       width: 100%;
     }
@@ -588,6 +637,19 @@
     margin-top: 17px;
     background-color: #b59f5b;
   }
+   
+  @media (min-width: 360px) and (max-width: 640px) {
+    .mailing_button {
+      width: 100%;
+    }
+    .search_label {
+      width: 100%;
+    }
+    .main {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
   
   .mailing_button:hover {
     background-color: #323232;
@@ -694,15 +756,9 @@
   .product {
     margin: 0 auto;
     width: 100%;
-    padding: 0 245px;
+  
     box-sizing: border-box;
     min-height: 435px;
-  }
-  @media (min-width: 641px) and (max-width: 1199px){
-    .product {
-      padding-left: 56px;
-      padding-right: 4px; 
-    }
   }
 
   .product__title {
@@ -720,56 +776,78 @@
     display: block;
     border-bottom: 3px solid #e1d9bd;
     width: 66px;
-    margin: 6px auto 19px;
+    margin: 6px auto 0px;
   }
 
     .product__container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 70%;
     box-sizing: border-box;
-    padding: 0px 145px;
+    padding: 0px;
+    margin: 0 14%;
   }  
+
+  .product__card__container:nth-child(odd){
+    margin-right: 5%;
+    margin-left: 5%;
+  } 
 
   @media (min-width: 641px) and (max-width: 1199px){
     .product__container {
       flex-wrap: wrap;
       padding: 0;
+      margin-left: 0px;
+      margin-right: 0px;
+      width: auto;
     }
-  } 
-  .product__card__container {
-    box-sizing: content-box;
+    .product__card__container{
+      width: 312px;
+      margin-top: 28px;
+    }
+    .product__card__container:nth-child(odd) {
+      margin-right: 0%;
+      margin-left: 0%;
   }
 
-  .product__card__container:nth-child(2) {
-    margin-left: 30px;
-    margin-right: 30px;
-}
-@media (min-width: 641px) and (max-width: 1199px){
-    .product__card__container:nth-child(3){
-      margin-top: 197px;
-    }
-    .product__card__container:nth-child(2){
-      margin-left:20px;
-      margin-right: 0px;
-    } 
-}
-  
 
+}
+@media (min-width: 360px) and (max-width: 640px) {
+  .product__container {
+    flex-wrap: wrap;
+    padding: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 70%;
+  }
+  .product__card__container:nth-child(odd) {
+    margin-right: 0%;
+    margin-left: 0%;
+}
+.product__card__text {
+  width: 325px;
+}
+}
+
+  .product__card__container {
+    max-width: 100%;
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+  }
+  
     .product__card__img {
-     position: absolute;  
+       padding-left: 20px;
   }
 
     .product__card__text {
       box-sizing: border-box;
       border: #b59f5b 3px solid;
-      width: 335px;
-      height: 267px;
-      position: relative;
-      top: 172px;
-      right: 23px;
-      padding-top:55px;
-      padding-left: 20px;
+      padding: 55px 20px 20px;
+      margin-top: -30px;
+      margin-right: -20px;
+      height: 258px;
     }
 
     .name__product {
@@ -800,7 +878,7 @@
       height: 48px;
       background-color: #b59f5b;
       text-align: center;
-      padding-top: 14px;
+      
     }
     .button__text {
       color:#eeeeee;
